@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tmathblogapp-dev-cfa78-authRole",
+      "UnauthRoleArn": "arn:aws:iam::891377298775:role/amplify-tmathblogapp-dev-cfa78-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::891377298775:role/amplify-tmathblogapp-dev-cfa78-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-tmathblogapp-dev-cfa78-deployment",
+      "UnauthRoleName": "amplify-tmathblogapp-dev-cfa78-unauthRole",
+      "StackName": "amplify-tmathblogapp-dev-cfa78",
+      "StackId": "arn:aws:cloudformation:eu-north-1:891377298775:stack/amplify-tmathblogapp-dev-cfa78/23a5d800-2c28-11ef-81f0-0a893160ff4c",
+      "AmplifyAppId": "dz4vnx6qgn94d"
+    },
+    "categories": {
+      "auth": {
+        "tmathblogapp4aa55d17": {}
+      },
+      "api": {
+        "tmathblogapp": {}
+      }
+    }
+  }
+}
