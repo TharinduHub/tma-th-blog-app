@@ -20,10 +20,6 @@ const ArticlePage = () => {
         setArticleInfo(data.getPost);
     }
 
-    const editArticleVisible = () => {
-        setIsUpdateArticleVisible(true);
-    }
-
     const onArticleUpdated = (isAdded) => {
         if(isAdded)
             loadArticleInfo();
@@ -35,10 +31,6 @@ const ArticlePage = () => {
         const { data } = await client.graphql(
             { query: deletePost, variables: {input:{ id: articleId }}, authMode: 'apiKey' }
         );
-        navigate("/");
-    }
-
-    const onCancelArticle = async () =>{
         navigate("/");
     }
 
@@ -56,9 +48,9 @@ const ArticlePage = () => {
                         <p>{articleInfo.body}</p>
                     </div>
             }
-            {!isUpdateArticleVisible && <button onClick={editArticleVisible}>Edit</button>}
+            {!isUpdateArticleVisible && <button onClick={() => setIsUpdateArticleVisible(true)}>Edit</button>}
             {!isUpdateArticleVisible && <button onClick={onDeleteArticle}>Delete</button>}
-            {!isUpdateArticleVisible && <button onClick={onCancelArticle}>Cancel</button>}
+            {!isUpdateArticleVisible && <button onClick={() => navigate("/")}>Cancel</button>}
 
         </>
     );

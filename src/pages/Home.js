@@ -17,12 +17,8 @@ const Home = () => {
         setArticles(data.listPosts.items);
     }
 
-    const addArticleVisible = () => {
-        setIsAddArticleVisible(true);
-    }
-
     const onArticleAdded = (isAdded) => {
-        if(isAdded)
+        if (isAdded)
             loadArticles();
 
         setIsAddArticleVisible(false);
@@ -36,11 +32,11 @@ const Home = () => {
         <>
             <div className='artile-title'>
                 <h1>Articles</h1>
-                {!isAddArticleVisible && <button onClick={addArticleVisible}>Add</button>}
+                {!isAddArticleVisible && <button onClick={() => setIsAddArticleVisible(true)}>Add</button>}
             </div>
             {
                 isAddArticleVisible ?
-                    <AddArticleForm articleAdded={isAdded => onArticleAdded(isAdded)}/>
+                    <AddArticleForm articleAdded={isAdded => onArticleAdded(isAdded)} />
                     : <ArticlesList articles={articles} />
             }
         </>
